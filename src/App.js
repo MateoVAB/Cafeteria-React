@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'React';
 import NavBar from './components/NavBar';
-import CartWidget from './components/CartWidget';
+import './logo.svg';
+import './components/CartWidget';
 
 
 function App() {
