@@ -1,8 +1,9 @@
-import React from 'React';
-import NavBar from './components/NavBar';
+import React from 'react';
+import NavBar from "./components/NavBar/index";
+
 import './logo.svg';
 import './components/CartWidget';
-
+  
 
 function App() {
   return (
