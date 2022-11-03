@@ -14,40 +14,27 @@
   padding: 0;
   list-style: none; }
 
-body {
-  margin: 5px; }
 
-nav img {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  padding: auto;
-  background-color: white;
-  background-image: linear-gradient(#EADDCA, #b9a672); }
-  nav ul {
-    text-decoration: none;
-    list-style: none; }
-    nav ul li a {
-      margin: 3px;
-      padding: 3px;
-      color: black;
-      font-weight: bold; }
-      nav ul li a:hover {
-        text-decoration: none;
-        color: black; }
-  nav h1 {
-    padding-top: 15px;
-    font-weight: bold;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 15ch;
-    animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
-    overflow: hidden;
-    text-decoration: underline; }
+  nav {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(#EADDCA, #b9a672); }
+    nav ul {
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 0.8px;
+      list-style: none; }
+      nav ul li a{
+        color:black
+      }
+      
+ 
