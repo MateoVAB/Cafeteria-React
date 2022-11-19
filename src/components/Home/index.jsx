@@ -8,7 +8,6 @@ export const Home  = () => {
   return (
     <CartProvider className={estilos.home}>
          <Cart />
-         <Products />
     </CartProvider>
   )
 }
