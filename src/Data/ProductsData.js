@@ -6,6 +6,15 @@ export const ProductsData = [
         name: "Granos de Cafe",
         img: "https://p4.wallpaperbetter.com/wallpaper/984/541/248/grains-coffee-heap-white-background-wallpaper-preview.jpg",
     },
+    
+    {
+        id: 3,
+        price: 200,
+        amount: 0,
+        name: "Avena",
+        img: "https://www.gemadistribuidora.com.ar/wp-content/uploads/2020/06/avena-tra.jpg",
+
+    },
 
 
     {
@@ -17,5 +26,14 @@ export const ProductsData = [
 
 
     },
+
+    {
+       id: 4,
+       price: 580,
+       amount: 0,
+       name: "Trituradora de Cafe",
+       img: "https://http2.mlstatic.com/D_NQ_NP_735696-MLA51505858008_092022-W.jpg",
+
+    }
 
 ]

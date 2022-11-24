@@ -19,11 +19,12 @@ function App() {
         <CartProvider >
         <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/categoria:categoriaId" element={<Products />} />
+            <Route path="/" element={<ItemListContainer />} />
+            <Route patth="/categoria/:categoriaId" element={<ItemListContainer />} />
+            <Route path="/categoria/:categoriaId" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/detalle" element={<ItemDetailContainer />} />
-            <Route path="/productos" element={<Productos/>} />
+            <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
+           
           </Routes>
         <Home />
         </CartProvider > 
