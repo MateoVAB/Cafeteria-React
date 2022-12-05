@@ -24,39 +24,41 @@ export const CartProvider = ({children}) => {
 
     const addItemToCart = (Products) => {
         const inCart = cartItems.find(
-            (productInCart) => productInCart.id === Products.id)
+            (ProductsInCart) => ProductsInCart.id === Products.id)
             
         if(inCart){
             setCartItems(
-                cartItems.map((productInCart) => {
-                    if (productInCart.id === Products.id) {
+                cartItems.map((ProductsInCart) => {
+                    if (ProductsInCart.id === Products.id) {
                         return {...inCart, amount: inCart.amount + 1 };
-                    } else return productInCart;
+                    } else return ProductsInCart;
                 })
             );
         } else {
             setCartItems([...cartItems, {...Products, amount: 1}])
+            
         }
         }
         const deleteItemToCart = (Products) => {
             const inCart = cartItems.find(
-                (productInCart) => productInCart.id === Products.id
+                (ProductsInCart) => ProductsInCart.id === Products.id
                 );
 
                 if(inCart.amount === 1 ){
                     setCartItems(
-                        cartItems.filter((productInCart => productInCart.id !== Products.id)
-                    ))  
+                        cartItems.filter((ProductsInCart) => ProductsInCart.id !== Products.id)
+                    )
                 }
 
                 else {
                     setCartItems(
-                    cartItems.map((productInCart) => {
-                        if(productInCart.id === Products.id){
-                        return { ...inCart, amount: inCart.amount - 1 };
-                    } else return productInCart;
+                    cartItems.map((ProductsInCart) => {
+                        if (ProductsInCart.id === Products.id){
+                        return {...inCart, amount: inCart.amount - 1 };
+                    } else return ProductsInCart;
                 }))
-        }}
+        }
+    }
 
         return (
             <CartContext.Provider value ={{cartItems, addItemToCart, deleteItemToCart}}>

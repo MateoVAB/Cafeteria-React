@@ -3,14 +3,15 @@ import NavBar from "./components/NavBar/index";
 import { CartProvider } from './Context/CartContext';
 import './logo.svg';
 import './components/CartWidget/index.jsx';
-import './components/NavBar/NavBar.css'
+import './components/NavBar/NavBar.module.css'
 import Home from './components/Home/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import ItemListContainer from './components/ItemListContainer';
 import Products from './components/Products';
-import Productos from './components/Productos';
+import Formulario from './components/Formulario/Formulario';
+
   
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <Route path="/categoria/:categoriaId" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
-           
+            <Route path="/Formulario" element={<Formulario/>} />
           </Routes>
         <Home />
         </CartProvider > 

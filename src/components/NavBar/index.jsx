@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from '../CartWidget/index'
 import { NavLink} from 'react-router-dom'
+import "./NavBar.module.css"
 
 export const NavBar = () => {
     return (
@@ -11,17 +12,13 @@ export const NavBar = () => {
                   </div>
                   <ul className="nav-list">                                                                                                                                                                                          
                   <li class="nav-item dropdown">
-                    <NavLink class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <NavLink class="nav-link dropdown-toggle" to="/categoria/ItemListContainer">
                         Productos
                     </NavLink>
-                    <ul class="dropdown-menu">
-                        <li><NavLink class="dropdown-item" to="/categoria/granos"href="#">Granos</NavLink></li>
-                        <li><NavLink class="dropdown-item" to="/categoria/extras"href="#">Extras</NavLink></li>
-                       
-                    </ul>
+                  
                     </li>
                     <li>
-                        <NavLink className="nav-link" href="#">Contacto</NavLink>
+                        <NavLink className="nav-link" to="Formulario">Contacto</NavLink>
 
                     </li>
                     <li>

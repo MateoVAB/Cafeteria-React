@@ -1,4 +1,7 @@
+import estilos from "./estilos.module.css"
+
 export const ProductsData = [
+
     {
         id: 1,
         price: 250,
@@ -22,7 +25,7 @@ export const ProductsData = [
         price: 350,
         amount: 0,
         name: "Balanza",
-        img: "http://d2r9epyceweg5n.cloudfront.net/stores/093/002/products/croma-0798d71c7ef4d8af0315131673896096-640-0.jpg",
+        img: "https://www.bidcom.com.ar/publicacionesML/productos/BALANZ03/1000x1000-BALANZ03.jpg",
 
 
     },
@@ -35,5 +38,6 @@ export const ProductsData = [
        img: "https://http2.mlstatic.com/D_NQ_NP_735696-MLA51505858008_092022-W.jpg",
 
     }
+    
 
 ]

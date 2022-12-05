@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import './style.css'
+import styles from './styles.module.css'
 import { ProductsData } from '../../Data/ProductsData'
 import { CartContext } from '../../Context/CartContext'
+import ItemListContainer from '../../components/ItemListContainer/index'
 
 const Products = () => {
   
@@ -9,9 +10,9 @@ const Products = () => {
   
   
   return (
-    <div>
+    <div className={styles.productsCon}>
       {ProductsData.map((Products) => (
-        <div>
+        <div className={styles.products}>
           <img src={Products.img} alt={Products.name} />
         <div>
           <p>

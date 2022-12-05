@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import img1 from '../../images/cart4.svg';
 import ItemCart from "../ItemCart";
+import estilos from "./estilos.module.css"
 
  const CartWidget = () => {
     
@@ -19,13 +20,13 @@ import ItemCart from "../ItemCart";
     }, [cartItems]);
 
     const precioFinal = cartItems.reduce(
-        (previus, current) => previus + current.amount * current.price)
+        (previus, current) => previus + current.amount * current.price, 0)
     
     
     return (
-        <div>
-         <div onClick={() => setCartOpen(!cartOpen)}>
-          <div>
+        <div className={estilos.cartCon}>
+         <div className={estilos.buttonCartCon} onClick={() => {setCartOpen(!cartOpen)}}>
+          <div className={estilos.buttonCart}>
                 {!cartOpen ? (
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         width="16" 
@@ -49,21 +50,21 @@ import ItemCart from "../ItemCart";
             </div>
 
         </div>
-        {!cartOpen && (
-           <div>{ProductsLength}</div>
-        )}
+        {!cartOpen && 
+           <div className={estilos.productsNum}>{ProductsLength}</div>
+        }
         {cartItems && cartOpen && (
-            <div>
-                <h2>Tu Carrito</h2>
+            <div className={estilos.cart}>
+                <h2 className={estilos.titulo}>Tu Carrito</h2>
 
-                {cartItems.length === 0 ? <p>Tu Carrito esta vacio</p> : (
+                {cartItems.length === 0 ? <p className={estilos.cartVacio}>Tu Carrito esta vacio</p> : (
                     <div>{cartItems.map((item, i) => (
                         <ItemCart key={i} item={item} />
                 ))}
                 </div>
 
                 )} 
-                <h2>Total: ${precioFinal}</h2> 
+                <h2 className={estilos.total}>Total: ${precioFinal}</h2> 
             </div>
         )}
         </div>
