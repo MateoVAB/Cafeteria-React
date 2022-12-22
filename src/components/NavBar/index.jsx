@@ -17,10 +17,7 @@ export const NavBar = () => {
                     </NavLink>
                   
                     </li>
-                    <li>
-                        <NavLink className="nav-link" to="Formulario">Contacto</NavLink>
-
-                    </li>
+                   
                     <li>
                         <NavLink className="nav-link" to='cart'>
                             <CartWidget />

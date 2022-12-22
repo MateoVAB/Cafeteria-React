@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Item = ({info}) => {
+export const Item = ({info}) => {
   return (
     <Link to={'/detalle/${info.id}'} className="granos">
-      <img src={info.image} alt="" />
+      <img className='detail.image' src={info.image} alt="" />
       <p>{info.name}</p>
       </Link>
       );

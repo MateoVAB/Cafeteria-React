@@ -70,8 +70,12 @@ const Formulario = () => {
                 </div>
             )}
             <input type="submit" value="Enviar" />
+            
+
+            
         </form>
-    </div>
+    
+</div>
 }
 
 export default Formulario;

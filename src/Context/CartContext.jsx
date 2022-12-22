@@ -1,8 +1,9 @@
 
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 
 
 export const CartContext = createContext()
+export const useCartContext = () => useContext(CartContext);
 
 export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState(() => {
@@ -13,7 +14,6 @@ export const CartProvider = ({children}) => {
             return [];
         }
 
-       
 
     })
     

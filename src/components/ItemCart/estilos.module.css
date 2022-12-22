@@ -21,7 +21,7 @@ img{
 
 }
 .left{
-    padding-left: 20px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between ;
@@ -47,8 +47,18 @@ button{
 }
 .right{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    
 
+}
+
+.compra{
+    display: flex;
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+}
+.compra p{
+    color: white;
 }

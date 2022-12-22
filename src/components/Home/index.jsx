@@ -7,6 +7,7 @@ import estilos from './estilos.module.css'
 
 export const Home  = () => {
   return (
+    
     <div className={estilos.home}>
     <CartProvider>
          

@@ -1,15 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import './ItemDetail.css'
 
-const ItemDetail = ({data}) => {
+export const ItemDetail = ({data}) => {
   return (
+    
     <div className="container">
     <div className="detail">
-       <img className='detail__image' src={data.img} alt="" />
+       <img className='detail__image' src={data.image} alt="" />
        <div className="content">
-         <h1>{data.name}</h1>
+         <p>{data.name}</p>
         </div>
        </div>
-      </div>   
+      </div>  
+      
   )
 }
 

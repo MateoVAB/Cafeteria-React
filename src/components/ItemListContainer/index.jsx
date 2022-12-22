@@ -8,7 +8,7 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 import Products from '../Products'
 
 
-export const ItemListContainer = ({texto}) => {
+export const ItemListContainer = ({Products}) => {
    const [data, setData] = useState([])
 
    const {categoriaId} = useParams();
@@ -27,10 +27,6 @@ export const ItemListContainer = ({texto}) => {
      }
      
    }, [categoriaId])
-   
-  
-  
-  
   
   return (
     <>
