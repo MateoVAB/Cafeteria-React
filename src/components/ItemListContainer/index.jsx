@@ -10,7 +10,7 @@ import Products from '../Products'
 
 export const ItemListContainer = ({Products}) => {
    const [data, setData] = useState([])
-
+  
    const {categoriaId} = useParams();
 
 
@@ -30,6 +30,7 @@ export const ItemListContainer = ({Products}) => {
   
   return (
     <>
+    
      <ItemList data={data} />
     </>
   )

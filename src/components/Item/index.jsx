@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export const Item = ({info}) => {
   return (
-    <Link to={'/detalle/${info.id}'} className="granos">
-      <img className='detail.image' src={info.image} alt="" />
+    <NavLink to="detalle/:info.Id" className="granos">
+      <img className='detalle.image' src={info.image} alt="" />
       <p>{info.name}</p>
-      </Link>
+      </NavLink>
       );
 }
 

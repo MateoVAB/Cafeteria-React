@@ -1,13 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './styles.module.css'
 import { ProductsData } from '../../Data/ProductsData'
 import { CartContext } from '../../Context/CartContext'
 import ItemListContainer from '../../components/ItemListContainer/index'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount'
 
 const Products = () => {
   
   const {addItemToCart} = useContext(CartContext)
+  const [goToCart, setGoToCart] = useState(false)
   
+  const onAdd = (quantity) => {
+    setGoToCart(true)
+  }
   
   return (
     <div className={styles.productsCon}>
@@ -19,7 +25,13 @@ const Products = () => {
              {Products.name} - ${Products.price}
           </p>
         </div>
-        <button onClick={() => addItemToCart(Products)}>Agregar al carrito</button>
+        {
+           
+           goToCart
+             ? <Link to="/CartWidget">Terminar Compra</Link> 
+             : <ItemCount initial={1} stock={6} onAdd={onAdd} />
+
+         }
         </div>
       ))}
     </div>
